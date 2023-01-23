@@ -1,0 +1,44 @@
+/* :root { */
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #F5F7FB;
+    margin: 0px;
+    color: #293264;
+}
+.all {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    justify-content: space-between;
+    align-items: center;
+}
+.text{
+    text-align: center;
+}
+.text > h1{
+    font-family: 'Karla', sans-serif;
+    margin-bottom: 0px;
+}
+.text > p {
+    margin-top: 7px;
+    margin-bottom: 19px;
+}
+.blob1{
+    align-self: flex-end;
+}
+.blob2{
+    align-self: flex-start;
+}
+button {
+    background-color: #4D5B9E;
+    color: #F5F7FB;
+    border: none;
+    width: 193px;
+    height: 62px;
+    border-radius: 15px;
+    font-weight: 500;
+}
