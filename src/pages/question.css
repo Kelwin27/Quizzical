@@ -1,4 +1,6 @@
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 body {
@@ -26,15 +28,7 @@ body {
 .blob2{
     align-self: flex-start;
 }
-button {
-    background-color: #4D5B9E;
-    color: #F5F7FB;
-    border: none;
-    width: 193px;
-    height: 62px;
-    border-radius: 15px;
-    font-weight: 500;
-}
+
 .answ-el {
     width: 700px;
     display: flex;

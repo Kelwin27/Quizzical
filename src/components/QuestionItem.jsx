@@ -1,33 +1,32 @@
 import React from 'react'
 
-const QuestionItem = (props) => {
+const QuestionItems = ({value, change}) => {
 
-    function addAnswer(props){
-        return console.log(props.id)
-    }
-
-    function answerEl (props){
+    function AnswerEl ({answers}){
         
         const styles = {
-            backgroundColor: props.isHold ? "red" : "#DBDEF0"
+            backgroundColor: answers.isHold ? "red" : "#DBDEF0"
         }
         
         return (
             <p className="question-item"
-                onClick={()=>addAnswer(props)}
+                onClick={() => {console.log(answers.id)}}
                 style={styles}
-            >{props.value}</p>
+            >{answers.value}</p>
         )
     }
 
   return (
     <div >
-        <h1>{props.text}</h1>
+        <h1>{value.text}</h1>
         <div className="answ-el">
-            {props.answers.map(pre => <div key={pre.id}>{answerEl(pre)}</div>)}
+            {value.answers.map(pre => <AnswerEl
+            key={pre.id}
+            answers = {pre}
+            />)}
         </div>
     </div>
   )
 }
 
-export default QuestionItem
+export default QuestionItems

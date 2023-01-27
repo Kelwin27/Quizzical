@@ -1,6 +1,6 @@
 import React from 'react'
 import './Input.css'
-import ButtonInput from '../UI/ButtonInput'
+import ButtonInput from "../components/UI/ButtonInput"
 import blob from "../images/blob1.png"
 import blob_blue from "../images/blob_blue1.png"
 
