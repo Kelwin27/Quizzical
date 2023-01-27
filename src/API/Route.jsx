@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import {nanoid} from 'nanoid'
+import Shuffle from "../components/Shuffle.jsx"
 
 export default class RouteQuestions {
     static async getAll (){
@@ -19,15 +20,14 @@ export default class RouteQuestions {
             
             answers.push({
                 value: answ[i],
-                id: nanoid(),
-                isHold: false
+                id: nanoid()
             })
         }
             newQuestions.push({
                 answer: preQuestions[i].correct_answer,
                 id: nanoid(),
                 text: preQuestions[i].question,
-                answers: answers
+                answers: Shuffle(answers)
             })}
             return newQuestions
         }

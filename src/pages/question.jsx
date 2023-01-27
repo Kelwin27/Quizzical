@@ -19,6 +19,11 @@ export default function Question() {
         fetchQuestions()
     }, [])
 
+    function selectAnswer(select, correct) {
+        console.log(select)
+        console.log(correct)
+    }
+
     return (
         <div className="allQ">
             <img src={blob} className="blob1" />
@@ -26,7 +31,7 @@ export default function Question() {
                 {questions.map(item => <QuestionItems
                 key={item.id}
                 value={item}
-                change={setQuestions}
+                change={selectAnswer}
                 />)}
             </div>
             <ButtonQuestion>Check answers</ButtonQuestion>
