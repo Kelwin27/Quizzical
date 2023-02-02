@@ -10,6 +10,9 @@ import QuestionItems from '../components/QuestionItem'
 export default function Question() {
 
     const [questions, setQuestions] = React.useState([])
+    const [total, setTotal] = React.useState(0)
+    const [show, setShow] = React.useState(false)
+    const [restart, setRestart] = React.useState(0)
 
     React.useEffect( () => { 
         async function fetchQuestions() {
@@ -17,11 +20,24 @@ export default function Question() {
             setQuestions(questions)
         }
         fetchQuestions()
-    }, [])
+    }, [restart])
 
-    function selectAnswer(select, correct) {
-        console.log(select)
-        console.log(correct)
+    function showAnswers() {
+        setShow(pre => !pre)
+
+        questions.forEach(q=>(q.answer === q.chosenAnswer) ? setTotal(pre => pre +1): setTotal(pre=> pre))
+    }
+    
+    function selectAnswer(select, questId) {
+
+        setQuestions(pre => pre.map(q => (q.id === questId) ? {...q, chosenAnswer: select} : q))//
+    }
+
+    function restartGame() {
+        setShow(false)
+        setQuestions([])
+        setTotal(0)
+        setRestart(r => r + 1)
     }
 
     return (
@@ -32,9 +48,14 @@ export default function Question() {
                 key={item.id}
                 value={item}
                 change={selectAnswer}
+                id={item.id}
+                show={show}
                 />)}
             </div>
-            <ButtonQuestion>Check answers</ButtonQuestion>
+            <div className="answerShow">
+                {(show) && <h3> Ваши правильные ответы: {total} из {questions.length} </h3>}
+                <ButtonQuestion show = {show} showAnswers={showAnswers} restart={restartGame} />
+            </div>
             <img src={blob_blue} className="blob2" />
         </div>
     )

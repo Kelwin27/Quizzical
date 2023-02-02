@@ -20,14 +20,15 @@ export default class RouteQuestions {
             
             answers.push({
                 value: answ[i],
-                id: nanoid()
+                id: nanoid(),
             })
         }
             newQuestions.push({
                 answer: preQuestions[i].correct_answer,
                 id: nanoid(),
                 text: preQuestions[i].question,
-                answers: Shuffle(answers)
+                answers: Shuffle(answers),
+                chosenAnswer: ''
             })}
             return newQuestions
         }

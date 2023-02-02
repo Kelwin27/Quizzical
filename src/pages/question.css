@@ -44,9 +44,31 @@ body {
 }
 .question-item{
     border: 1px solid #4D5B9E;
+    background-color: transparent;
     border-radius: 8px;
     padding: 10px 15px;
     margin: 10px;
     cursor: pointer;
 }
+
+.question-item.selected{
+    background-color: #d6dbf5;
+}
+
+.question-item.correct{
+    background-color: #94d7a2;
+}
+
+.question-item.incorrect{
+    background-color: #f8bcbc;
+}
+.answerShow {
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+}
+.answerShow h3 {
+    margin-right: 30px;
+}
+
 

@@ -1,26 +1,15 @@
 import React from 'react'
 
-const QuestionItems = ({value, change}) => {
+const QuestionItems = ({value, change, id, show}) => {
 
-    function AnswerEl ({answers, select, answer}){
+    function AnswerEl ({answers, select, answer, questId, chosenAnswer}){
 
-        const [p, setP] = React.useState({backgroundColor:false,checked:false})
-        const styles = {
-            backgroundColor: p.backgroundColor ? "#D6DBF5" : "#F5F7FB"
-        }
-
-        const selectIt = () => {
-            select(answers.value, answer)
-            setP({
-                backgroundColor: !p.backgroundColor, 
-                checked: !p.checked
-            })
-        }
-              
         return (
-            <p className="question-item"
-                onClick={() => {selectIt()}}
-                style={styles}
+            <p className={`question-item ${answers.value === chosenAnswer && !show ? 'selected' : ''}
+            ${show && answers.value === answer ? 'correct' : ''}
+            ${show && answers.value === chosenAnswer && answers.value !== answer ? 'incorrect' : ''}
+            `}
+                onClick={() => select(answers.value, questId)}
             >{answers.value}</p>
         )
     }
@@ -30,11 +19,13 @@ const QuestionItems = ({value, change}) => {
         <h1>{value.text}</h1>
         <div className="answ-el">
             {value.answers.map(pre => <AnswerEl
-            key={pre.id}
-            answers = {pre}
-            select = {change}
-            answer = {value.answer}
-            />)}
+                    key={pre.id}
+                    answers = {pre}
+                    select = {change}
+                    answer = {value.answer}
+                    questId = {id}
+                    chosenAnswer = {value.chosenAnswer}
+                    />)}
         </div>
     </div>
   )
