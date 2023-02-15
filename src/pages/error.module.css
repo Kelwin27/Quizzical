@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.errorEl{
+    font-family: 'Inter', sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.errorEl h1 {
+    color: red;
+    margin-bottom: 15px;
+}
+.link{
+    background-color: #4D5B9E;
+    padding: 20px 40px;
+    border: none;
+    border-radius: 20px;
+    color: aliceblue;
+    text-decoration: none;
+}
