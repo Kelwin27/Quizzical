@@ -54,7 +54,8 @@ const Register = () => {
             return;
         }
         try {
-            const response = await axios.post("http://127.0.0.1:8000/users",
+            // const response = await axios.post("http://127.0.0.1:8000/users",
+            const response = await axios.post("https://quizz-fastapi.onrender.com/users",
                 JSON.stringify({ username : user, password : pwd }),
                 {
                     headers: { 'Content-Type': 'application/json' }

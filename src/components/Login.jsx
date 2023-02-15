@@ -34,7 +34,8 @@ const Login = () => {
         fData.append("password", pwd)
 
         try {
-            const response = await axios.post("http://127.0.0.1:8000/login", fData,
+            // const response = await axios.post("http://127.0.0.1:8000/login", fData,
+            const response = await axios.post("https://quizz-fastapi.onrender.com/login", fData,
             {
             headers: { 'Content-Type': "multipart/form-data" },
             });
