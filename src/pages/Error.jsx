@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom"
-import classes from "./error.module.css"
+import classes from "./css/error.module.css"
 
 const Error = () => {
     return (

@@ -1,8 +1,6 @@
-import React from "react";
 import classes from "./button.module.css"
 
 export default function ButtonQuestion({ show, restart, showAnswers }){
-
     return (
             <div>
                 {(!show) 

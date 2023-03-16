@@ -3,12 +3,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-body {
-    font-family: 'Inter', sans-serif;
-    background-color: #F5F7FB;
-    margin: 0px;
-    color: #293264;
-}
 .loader-img{
     display: flex;
     flex-direction: column;
@@ -21,6 +15,17 @@ body {
     color: #293264;
     font-size: 30px;
 }
+.questScreenEl {
+    font-family: 'Inter', sans-serif;
+    background-color: #F5F7FB;
+    margin: 0px;
+    color: #293264;
+    background-image: url(../images/blob2.png), url(../images/blob_blue2.png);
+    background-repeat: no-repeat, no-repeat;
+    background-position: top right, bottom left;
+    width: 100vw;
+    height: 100vh;
+}
 .allQ {
     display: flex;
     flex-direction: column;
@@ -28,9 +33,7 @@ body {
     height: 80vh;
     justify-content: space-between;
     align-items: center;
-    background-image: url(../images/blob2.png), url(../images/blob_blue2.png);
-    background-repeat: no-repeat, no-repeat;
-    background-position: top right, bottom left;
+
 }
 
 .textQ{

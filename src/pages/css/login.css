@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.formEl {
+    font-family: 'Inter', sans-serif;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    background-image: url(../images/blob1.png), url(../images/blob_blue1.png);
+    background-repeat: no-repeat, no-repeat;
+    background-position: top right, bottom left;
+}
+.formEl h1 {
+    font-size: 30px;
+}
+.formIn{
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0px;
+}
+.formEl label {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.formEl input {
+    padding: 10px;
+    border-radius: 15px;
+}
+.formEl button {
+    margin: 30px auto 10px auto;
+    background-color: #4D5B9E;
+    color: #F5F7FB;
+    border: none;
+    width: 193px;
+    height: 62px;
+    border-radius: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 18px;
+    letter-spacing: 2.5px;
+}
+
+.redirectLog{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.lineLogin{
+    margin-top: 10px;
+}
+.errmsg {
+    background-color: lightpink;
+    color: firebrick;
+    font-weight: bold;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+.offscreen {
+    position: absolute;
+    left: -9999px;
+}

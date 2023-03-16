@@ -6,7 +6,7 @@ function Spinner({ message }) {
     <div className="loader-img">
       <PacmanLoader
         color="#36d64f"
-        size = "50"
+        size = "50px"
       />
 
       <p className="loader-msg">{message}</p>

@@ -1,0 +1,135 @@
+
+.userPageMain{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 100px;
+}
+.userProfileEl{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.profileImage{
+    max-height: 300px;
+    max-width: 400px;
+    margin: 40px 0px;
+}
+.userRedaxForm{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.userRedaxForm input{
+    margin-top: 15px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 15px;
+}
+.userButtonEl{
+    margin: 15px auto 10px auto;
+    background-color: #4D5B9E;
+    color: #F5F7FB;
+    border: none;
+    width: 193px;
+    height: 62px;
+    border-radius: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 18px;
+}
+.userButtonEl:hover{
+    background-color: #263060;
+}
+.userQuestEl{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.userQuestionList{
+    margin-top: 20px;
+    max-width: 1200px;
+}
+.questionRedaxForm{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.questionRedaxForm input{
+    margin: 10px;
+    padding: 8px;
+    border-radius: 12px;
+}
+.questionRedaxForm label{
+    margin: 5px 0px;
+}
+.userQuestionList{
+    border-collapse: collapse;
+}
+.userQuestionList td, th{
+    border: 1px solid grey;
+    padding: 3px 5px;
+}
+.deleteUserQuestion{
+    padding: 10px 20px;
+    background-color: red;
+    color: #F5F7FB;
+    cursor: pointer;
+    border-radius: 10px;
+    margin: 5px 10px;
+    font-size: 1.2rem;
+    border: none;
+}
+.deleteUserQuestion:hover{
+    background-color: rgb(185, 7, 7);
+}
+.editUserQuestion{
+    padding: 10px 20px;
+    background-color: rgb(22, 186, 22);
+    color: #F5F7FB;
+    cursor: pointer;
+    border-radius: 10px;
+    margin: 5px 10px;
+    font-size: 1.2rem;
+    border: none;
+}
+.editUserQuestion:hover{
+    background-color: green;
+}
+.addQuestionEl{
+    margin-top: 30px;
+    cursor: pointer;
+    color: #4D5B9E;
+    font-size: larger;
+}
+.categoryEl{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.categoryEl select {
+    padding: 7px;
+    border-radius: 10px;
+    width: 400px;
+    color: #F5F7FB;
+    background-color: #4D5B9E;
+}
+.pageBtn{
+    padding: 10px 20px;
+    background-color: rgb(57, 45, 191);
+    color: #F5F7FB;
+    cursor: pointer;
+    border-radius: 30px;
+    margin: 15px 10px;
+    font-size: 1.2rem;
+    border: none;
+}
+.pageBtnClicked{
+    padding: 10px 20px;
+    color: rgb(57, 45, 191);
+    background-color: #F5F7FB;
+    cursor: pointer;
+    border-radius: 30px;
+    margin: 15px 10px;
+    font-size: 1.2rem;
+}
